@@ -1,0 +1,97 @@
+<html>
+
+<body>
+    <script>
+        // document("<form method='post' action = 'calc')
+        function check() {
+
+        }
+        // var num1, num2;
+        // var res = [];
+        // for (i = 0; i < 2; i++) {
+        //     var random = document.getElementById(i);
+        //     num1 = Math.floor((Math.random() * 10) + 1);
+        //     num2 = Math.floor((Math.random() * 10) + 1);
+        //     res[i] = num1 * num2;
+        //     random.innerHTML = num1 + " * " + num2 + " = ";
+        // }
+
+
+        function myFunction() {
+            var table = document.getElementById("table");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "NEW CELL1";
+            // cell2.innerHTML = <input type="text" name="result1">;
+        }
+        // function ran() {
+        var num1, num2;
+        var res = [];
+        var x = document.createElement("th");
+
+        num1 = Math.floor((Math.random() * 10) + 1);
+        num2 = Math.floor((Math.random() * 10) + 1);
+        // document.write(num1 + " * " + num2 + " = ")
+        var sic = document.innerHTML=num1 + "*" + num2;
+        // res[i] = num1 * num2;
+        // x.appendChild(sic);
+        document.getElementById("1").innerHTML = sic;
+        // for (var i = 0; i < 10; i++) 
+        
+        // }
+
+
+    </script>
+    <table border=1 id="table">
+        <form action="" name="inputform">
+            <tr id="1">
+                <th><input type="text" name="result1"></th>
+            </tr>
+            <tr id="2">
+                <th><input type="text" name="result1"></th>
+            </tr>
+
+            <tr>
+                <th colspan='2'>
+                    <input type='submit' value='제출' onclick='check()'>
+                    <input type='reset' value='취소'>
+                </th>
+
+            </tr>
+    </table>
+    맞은개수 : <input type="text" name="result" size="11" readonly><br>
+    점 수 : <input type="text" name="score" size="15" readonly>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

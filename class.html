@@ -1,0 +1,170 @@
+<html>
+
+<!--     
+    // function Person(name = null, age = 0, tel = null) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.tel = tel;
+        //     this.getName = function () {
+            //         return this.name;
+            //     }
+            //     this.getAge = function () {
+                //         return age;
+                //     }
+                //     this.gettel = function () {
+                    //         return tel;
+                    //     }
+                    // }
+                    // var kim = new User("Kim", 12, "1111-2222");
+                    // document.write(kim.getAge() + " " + kim.getName() + " " + kim.gettel() + "<br>")
+                    
+                    
+                    // function User(name = null, age = 0, tel = null) {
+                        //     this.name = name;
+                        //     this.age = age;
+                        //     this.tel = tel;
+                        //     this.getName = getName;
+                        //     this.getAge = getAge;
+                        //     this.getTel = getTel;
+                        //     this.getAge = function () {
+                            //         return this.age;
+                            //     }
+                            //     this.getName = function () {
+                                //         return this.name;
+                                //     }
+                                //     this.getTel = function () {
+                                    //         return this.tel;
+                                    //     }
+                                    // }
+                                    // var lee = new User("Lee", 50, "111111-333333j");
+                                    // document.write(lee.getName() + " " + lee.getAge() );
+                                    
+                                    // function Customer(name = null, age =0 , tel = null){
+                                        //     this.name = name;
+                                        //     this.age =age;
+                                        //     this.tel = tel;
+                                        // }
+                                        // Customer.prototype.getAge = function(){
+                                            //     return this.age;
+                                            // }
+                                            // Customer.prototype.getName = function(){
+                                                //     return this.name;
+        // }
+        // Customer.prototype.getTel = function(){
+            //     return this.tel;
+            // }
+            // var hong = new Customer("hong"  , 30 , "11111-111");
+            // document.write(hong.getAge() + " " + hong.getName() + " " + hong.getTel() + "<br>")
+            
+            
+            // var park  = new Object();
+            // park.name = "park";
+            // park.age = 50;
+            // park.tel="2222-333";
+            // park.getAge = function(){
+                //     return this.age;
+                // }
+                // park.getName = function(){
+                    //     return this.name;
+                    // }
+        // park.getTel = function(){
+            //     return this.tel;
+            // }
+            // document.write(park.getAge() + " " + park.getName() + " " + park.getTel() + "<br>")
+             -->
+
+<!-- <body onload="clock()">
+    <script>
+
+        var m = ["red" , "yellow" ,"green", "blue","black","gray"];
+        function clock() {
+            var date = new Date();
+            document.title = date.getHours() + " : " +
+                date.getMinutes() + " : " + date.getSeconds();
+            // setInterval();
+            // setTimeout( "clock()", 1000);
+            // document.bgColor = m[ date.getSeconds() % m.length ]
+            
+
+        }
+        setInterval("clock()", 1000);
+
+
+    </script>
+</body> -->
+
+<body onload="clock()">
+<div id="result"></div>
+<br>
+<script>
+
+        window.onload = function(){
+            inputform.color.focus();
+        }
+
+        function setColor() {
+            window.document.inputform.color.focus();
+            document.bgColor = inputform.color.value;
+            inputform.color.value = "";
+        }
+        setInterval("clock()", 1000);
+        function calc(){
+            var a = inputform.a.value;
+            var b = inputform.b.value;
+            if( isNaN(a) || isNaN(b)){
+                alert("숫자만 입력하세요!!");
+                return;
+            }
+            inputform.result.value = eval(a) + eval(b);
+        }
+        function myhobby(){
+            var result = document.getElementById("result");
+            var msg = "";
+            for(i = 0 ; i < inputform.hobby.length; i++){
+                if(inputform.hobby[i].checked){
+                    msg += inputform.hobby[i].value + " ";
+                }
+            }
+            result.innerHTML = msg;
+        }
+        function tosite(){
+            var url = inputform.site.options[inputform.site.selectedIndex].value;
+            location.href = url;
+        }
+    </script>
+    <form name="inputform">
+        <select name ="site">
+            <option value="http://www.naver.com">네이버</option>
+            <option value="http://www.daum.net">다음</option>
+            <option value="http://www.google.com">구글</option>
+            <option value="http://www.nate.com">네이트</option>
+        </select>
+        <input type = "button" value="이동" onclick="tosite()">
+
+        <br>
+        <br>
+            <br>
+
+        취미:
+        <input type = "checkbox" name="hobby" value="등산">등산
+        <input type = "checkbox" name="hobby" value="낚시">낚시
+        <input type = "checkbox" name="hobby" value="운동">운동
+        <input type = "checkbox" name="hobby" value="게임">게임
+        <input type = "button" value="선택" onclick="myhobby()">
+        <br>
+
+        덧셈 : <input type = "text" name = "a"> + <input type = "text" name="b">
+        = <input type = "text" name = "result" readonly> <input type ="button" value="확인" onclick ="calc()"> <br>
+        <br>
+        <a href = "#" onmouseover = "document.bgColor = 'red'" onmouseout = "document.bgColor ='white'">빨간색</a><br>
+        <a href = "#" onmouseover = "document.bgColor = 'blue'" onmouseout = "document.bgColor ='white'">파란색</a><br>
+        <a href = "#" onmouseover = "document.bgColor = 'yellow'" onmouseout = "document.bgColor ='white'">노란색</a><br>
+        <a href = "#" onmouseover = "document.bgColor = 'green'" onmouseout = "document.bgColor ='white'">초록색</a><br>
+        <br>
+        배경색 : <input type="text" name=color>
+        <input type="button" value="선택" onclick="setColor()">
+        <br>
+    </form>
+</body>
+
+</html>
