@@ -9,16 +9,13 @@
     <script>
         //just reset function
         function reset() {
-            sum = 0;
-            right = 0;
-            inputform.score.value = sum;
-            inputform.rightNumber.value = right;
+            inputform.score.value = "";
+            inputform.rightNumber.value = "";
         }
         //check function
         function check() {
             var right = 0, sum = 0;
-            var textInput = ['res0'];
-            var a = document.get
+            var textInput = [];
             for (i = 0; i < 10; i++) {
                 textInput[i] = "res" + i;
                 var a = document.getElementById(textInput[i]).value;
