@@ -1,0 +1,149 @@
+/* div,span{
+	transition:all 0.5;
+}
+div:hover, span:hover{
+	color:red;
+} */
+body {
+  /* position: relative; */
+  /* padding: 10px; */
+  /* transition: all 1s ease; */
+  color:white;
+  background: linear-gradient(-65deg, rgb(255, 255, 255), rgb(202, 142, 165), rgb(146, 212, 236), rgb(66, 66, 66));
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  perspective: 600px;
+}
+
+table,
+tr,
+th,
+td {
+  
+  padding: 5px;
+  margin: 5px;
+  border: 1px;
+  border-style: groove;
+  border-radius: 10px;
+}
+/* table::before{
+  color: rgb(216, 185, 81);
+  font-size: 2em;
+  content: "개인정보";
+}
+table::after {
+  color: rgb(216, 185, 81);
+  font-size: 2em;
+  content: "Catch Me!!";
+  
+} */
+table {
+  position: relative;
+  /* left: 0px; */
+  transition: transform 4s ease-in-out;
+  animation: ta 36s infinite ease-in-out both alternate;
+  /* animation-direction:  */
+  transform-style: preserve-3d;
+}
+
+@keyframes Gradient {
+  0% {
+      background-position: 0% 50%
+  }
+  50% {
+      background-position: 100% 50%
+  }
+  100% {
+      background-position: 0% 50%
+  }
+}
+/* table:hover{
+  transform: rotate(90deg);
+}
+ @keyframes ta {
+  0% {
+      left: 50px;
+      top: 50px;
+      transform: rotateX(10deg);
+  }
+  25% {
+      left: 500px;
+      top: 50px;
+  }
+  50% {
+      left: 500px;
+      top: 300px;
+      transform: rotateY(20deg);
+  }
+  75% {
+      left: 50px;
+      top: 300px;
+      transform: rotateX(-10deg);
+  }
+
+  100% {
+      left: 50px;
+      top: 50px;
+      transform: rotateY(-10deg);
+  }
+}   */
+
+tr:hover {
+  width: 300px;
+  background-color: rgb(211, 211, 211);
+  color: rgb(255, 255, 255);
+}
+
+th:last-child:hover {
+  background-color: transparent;
+
+}
+
+input {
+  border: 1px solid white;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+input[type="button"]{
+  border:1px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: transparent;
+}
+
+/* input[type="text"] {
+  background-color: transparent;
+  width: 20;
+  transition: width 1s ease;
+}
+
+input[type=text]:hover {
+
+  background: rgba(152, 212, 165, 0.651);
+  width: 100px;
+} */
+.tail {
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: tomato;
+  }
+input:hover {
+  background-color: rgb(163, 155, 155);
+  color: rgb(255, 255, 255);
+}
+@media only screen and (max-width:500px){
+    table{
+        left: 20%;
+        right:20%;
+        padding:100px;
+        /* padding-right : 10%; */
+        /* float:left; */
+    }
+}
+span#adr:hover, div#zip:hover{
+	color:black;
+	
+}
