@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>portfolio</title>
+</head>
+
+<body>
+
+    <h1 align="center">DotNet 일부 영상</h1>
+    
+    <div id="main" style="text-align:center"></div>
+    <script>
+        const mp4s = ['결제.mp4','댓글및삭제.mp4','드래그앤드롭.mp4',
+        '메일및삭제.mp4','무한스크롤.mp4','질문과답변.mp4','친구설문피드.mp4','친구추가.mp4']
+
+        let getMain = document.getElementById('main')
+        mp4s.forEach((el)=>
+            getMain.innerHTML +=el.split(".")[0]+
+                '<br>'+
+                '<video width="800px" controls>'+
+                    '<source src="D:/영상포트폴리오/'+el+'" type="video/mp4">'+
+                '</video><br><hr width="900px"><br>'
+            
+        );
+    </script>
+</body>
+
+</html>
