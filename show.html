@@ -11,15 +11,15 @@
     
     <div id="main" style="text-align:center"></div>
     <script>
-        const mp4s = ['결제.mp4','댓글및삭제.mp4','드래그앤드롭.mp4',
-        '메일및삭제.mp4','무한스크롤.mp4','질문과답변.mp4','친구설문피드.mp4','친구추가.mp4']
+        const mp4s = ['pay.mp4','comment.mp4','d&d.mp4',
+        'mail.mp4','infinit.mp4','q&a.mp4','frSurFeed.mp4','addFr.mp4']
 
         let getMain = document.getElementById('main')
         mp4s.forEach((el)=>
             getMain.innerHTML +=el.split(".")[0]+
                 '<br>'+
                 '<video width="800px" controls>'+
-                    '<source src="https://github.com/yegyu/DotNet/blob/develop/%EC%98%81%EC%83%81%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/'+el+'" type="video/mp4">'+
+                    '<source src="https://github.com/yegyu/DotNet/blob/develop/dn_video/'+el+'" type="video/mp4">'+
                 '</video><br><hr width="900px"><br>'
             
         );
